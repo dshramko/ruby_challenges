@@ -34,7 +34,7 @@ class Words
     len_offset = @min_sub
     while offset >= 1 do
       for i in pos..offset do
-        @result_array << @compound_word[i, len_offset] if (@compound_word[i, len_offset] == word)
+        @result_array.push @compound_word[i, len_offset] if (@compound_word[i, len_offset] == word)
       end
       offset -= 1
       len_offset += 1
